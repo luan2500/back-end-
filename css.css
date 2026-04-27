@@ -1,0 +1,102 @@
+/* Reset básico e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradiente suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; /* Cor de texto padrão */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco com leve transparência */
+    padding: 40px; /* Mais espaço interno */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+    width: 100%;
+    max-width: 550px; /* Um pouco maior */
+    text-align: center;
+    backdrop-filter: blur(5px); /* Efeito de desfoque (funciona bem com gradiente no body) */
+}
+
+h2 {
+    margin-bottom: 30px; /* Mais espaço abaixo do título */
+    color: #4a4a4a; /* Cor de título um pouco mais escura */
+    font-size: 28px; /* Título maior */
+    font-weight: 600; /* Negrito mais suave */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Mais espaço entre os grupos de campos */
+    text-align: left;
+    position: relative; /* Para posicionamento de pseudo-elementos ou ícones se quiser adicionar depois */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500; /* Peso de fonte médio */
+    color: #555;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 15px 15px; /* Mais padding para os campos */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Bordas ligeiramente arredondadas */
+    box-sizing: border-box;
+    font-size: 17px; /* Fonte um pouco maior nos inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    outline: none; /* Remove o contorno padrão do foco */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #764ba2; /* Cor da borda ao focar, combinando com o gradiente */
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.2); /* Sombra suave ao focar */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px; /* Altura mínima para o textarea */
+}
+
+button[type="submit"] {
+    background-color: #764ba2; /* Cor principal do botão */
+    color: white;
+    padding: 15px 25px; /* Botão maior */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px; /* Fonte maior no botão */
+    font-weight: 600; /* Negrito */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    width: 100%; /* Botão ocupando a largura total */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+button[type="submit"]:hover {
+    background-color: #6a3e92; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação */
+}
+
+/* Estilo para o placeholder do campo de telefone */
+input[type="tel"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
